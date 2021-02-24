@@ -1,5 +1,6 @@
 import s from './MyPosts.module.css';
 import React from "react";
+import Post from "./Post/Post";
 
 const MyPosts = () => {
     return (
@@ -14,9 +15,10 @@ const MyPosts = () => {
             </div>
             <div className={s.posts}>
                 <ul>
-                    <li className={s.item}><a href="#">Post one</a></li>
-                    <li className={s.item}><a href="#">Post two</a></li>
-                    <li className={s.item}><a href="#">Post three</a></li>
+                    <Post />
+                    <Post />
+                    <Post />
+                    <Post />
                 </ul>
             </div>
         </div>
