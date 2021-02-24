@@ -1,8 +1,20 @@
 .content {
   grid-area: c;
-  background-color: cornflowerblue;
+}
+
+.banner img {
+  width: 100%;
 }
 
 .item {
-  color: greenyellow;
+}
+
+.bio {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bio__img img {
+  width: 100px;
 }
