@@ -2,11 +2,12 @@
     grid-area: n;
 }
 
-.item {
+.item a {
     color: green;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.item.active {
+.item.active a {
     color: gold;
 }
