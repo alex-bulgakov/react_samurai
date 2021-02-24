@@ -13,14 +13,3 @@
 .posts img {
     width: 50px;
 }
-
-.item a {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.item img {
-    margin-right: 10px;
-}

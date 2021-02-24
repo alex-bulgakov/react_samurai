@@ -6,6 +6,7 @@ const Post = () => {
         <li className={s.item}><a href="#">
             <img src="avatar.jpg" alt="avatar"/>
             <span className={s.title}>Test post</span>
+            <span className="like">1 like</span>
         </a></li>
     );
 }

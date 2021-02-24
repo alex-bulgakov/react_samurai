@@ -15,10 +15,10 @@ const MyPosts = () => {
             </div>
             <div className={s.posts}>
                 <ul>
-                    <Post />
-                    <Post />
-                    <Post />
-                    <Post />
+                    <Post/>
+                    <Post/>
+                    <Post/>
+                    <Post/>
                 </ul>
             </div>
         </div>

@@ -1,26 +1,15 @@
-.my_posts {
-
-}
-
-.new_post {
-
-}
-
-.new_post_title {
-
-}
-
-.posts img {
-    width: 50px;
-}
-
 .item a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
+
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 
 .item img {
     margin-right: 10px;
+    border-radius: 100%;
 }
