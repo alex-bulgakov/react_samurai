@@ -15,10 +15,10 @@ const MyPosts = () => {
             </div>
             <div className={s.posts}>
                 <ul>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
+                    <Post value={'hello'}/>
+                    <Post value={'My firs post'}/>
+                    <Post value={'I started new project'}/>
+                    <Post value={'My WIP'}/>
                 </ul>
             </div>
         </div>
