@@ -23,7 +23,10 @@ const Profile = () => {
             My posts
             <div className={s.new_post}>
                 <h3 className={s.new_post_title}>New post</h3>
-                <textarea name="newpost" id="newpost" cols="100" rows="5" placeholder={'Add post...'}></textarea>
+                <form action="#">
+                    <textarea name="newpost" id="newpost" cols="100" rows="5" placeholder={'Add post...'}></textarea>
+                    <button>Send</button>
+                </form>
             </div>
             <div className={s.posts}>
                 <ul>
