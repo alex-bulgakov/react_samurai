@@ -1,20 +1,40 @@
 .content {
-  grid-area: c;
+    grid-area: c;
 }
 
 .banner img {
-  width: 100%;
+    width: 100%;
 }
 
-.item {
+.item a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+
 }
 
 .bio {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .bio__img img {
-  width: 100px;
+    width: 100px;
+}
+
+.bio__descr {
+
+}
+
+.posts {
+
+}
+
+.new_post {
+
+}
+
+.new_post_title {
+
 }
