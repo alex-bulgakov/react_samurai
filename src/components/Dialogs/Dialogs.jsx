@@ -3,7 +3,9 @@ import s from './Dialogs.module.css';
 
 const Dialogs = () => {
     return  (
-        <span>Dialogs</span>
+        <div className={s.dialogs}>
+            dialogs
+        </div>
     );
 }
 

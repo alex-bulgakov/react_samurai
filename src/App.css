@@ -13,8 +13,16 @@
     color: #232323;
 }
 
+.app-wrapper-content {
+
+}
+
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.content {
+    grid-area: c;
 }
