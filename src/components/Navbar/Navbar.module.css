@@ -2,12 +2,17 @@
     grid-area: n;
 }
 
-.item a {
+
+.nav a {
     color: green;
     font-weight: bold;
     text-decoration: none;
 }
 
-.item.active a {
+.item {
+
+}
+
+a.active {
     color: gold;
 }
