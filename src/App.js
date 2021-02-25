@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './lib/fontawesome/css/fa_all.min.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
