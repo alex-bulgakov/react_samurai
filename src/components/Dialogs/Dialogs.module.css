@@ -1,3 +1,58 @@
 .dialogs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
 
+.dialogs_list {
+}
+
+.dialogs_list ul {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    border-right: solid 2px #a4d799;
+    padding-right: 20px;
+}
+
+.dialogs_item a {
+    display: block;
+    min-width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: #a4d799;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.messages ul {
+    width: 250px;
+}
+
+.messages_item {
+    display: block;
+    box-sizing: border-box;
+    width: fit-content;
+    /*min-height: 50px;*/
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: rgba(164, 215, 153, 0.45);
+}
+
+li.active a {
+    background-color: #88d56c;
+    box-shadow: 0 0 20px -5px black;
 }

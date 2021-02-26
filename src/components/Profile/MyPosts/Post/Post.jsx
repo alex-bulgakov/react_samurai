@@ -3,7 +3,7 @@ import React from "react";
 
 const Post = (props) => {
     return (
-        <li className={s.item}><a href="#">
+        <li className={s.item}><a href="/">
             <img src="avatar.jpg" alt="avatar"/>
             <span className={s.title}>{`${props.message}`}</span>
             <div className={s.likes}>

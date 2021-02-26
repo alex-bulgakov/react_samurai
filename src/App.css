@@ -2,10 +2,10 @@
     margin: 0 auto;
     display: grid;
     width: 1200px;
-    grid-template-areas: "h h h" "c c n";
+    grid-template-areas: "h h " "c n";
 
     grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 10fr 1fr;
     grid-gap: 10px;
 
     font-family: Roboto;
@@ -14,13 +14,19 @@
 }
 
 .app-wrapper-content {
-
+    width: 100%;
 }
 
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 .content {
