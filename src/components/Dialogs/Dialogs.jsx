@@ -4,7 +4,14 @@ import {NavLink} from "react-router-dom";
 
 const Dialog = (props) => {
     return (
-        <li className={s.dialogs_item}><NavLink to="/dialogs/1">Vova</NavLink></li>
+        <li className={s.dialogs_item}><NavLink to={"/dialogs/" + props.id}>{props.name}</NavLink>
+        </li>
+    );
+}
+
+const Message = (props) => {
+    return (
+        <li className={s.messages_item}>{props.message}</li>
     );
 }
 const Dialogs = () => {
@@ -12,21 +19,22 @@ const Dialogs = () => {
         <div className={s.dialogs}>
             <div className={s.dialogs_list}>
                 <ul>
-                    <Dialog/>
+                    <Dialog id={"1"} name={"Vova"}/>
+                    <Dialog id={"2"} name={"Ira"}/>
+                    <Dialog id={"3"} name={"Svet"}/>
+                    <Dialog id={"4"} name={"Mixa"}/>
+                    <Dialog id={"5"} name={"Sanya"}/>
+                    <Dialog id={"6"} name={"Jeka"}/>
                 </ul>
             </div>
             <div className={s.messages}>
                 <ul>
-                    <li className={s.messages_item}>Hi</li>
-                    <li className={s.messages_item}>Hello</li>
-                    <li className={s.messages_item}>Fuck</li>
-                    <li className={s.messages_item}>Yankee go home</li>
-                    <li className={s.messages_item}>Test test Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Enim, nostrum.
-                    </li>
-                    <li className={s.messages_item}>Putin uxodi</li>
-                    <li className={s.messages_item}>Simple message</li>
-                    <li className={s.messages_item}>GIT Force</li>
+                    <Message message={"Hello"}/>
+                    <Message message={" sdfls lkdsfljsdf jas"}/>
+                    <Message message={"Wew woe"}/>
+                    <Message message={"dsdf; a;asdf;l a;sdfg;ajorg;etog;eb "}/>
+                    <Message message={"sdafo;asd a;sdof ;aosdfxdkcvn a;dfs oi as;odfij ;asokdfj o"}/>
+                    <Message message={"sd"}/>
                 </ul>
             </div>
             <div></div>

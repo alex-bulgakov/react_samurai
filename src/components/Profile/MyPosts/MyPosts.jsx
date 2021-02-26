@@ -1,6 +1,8 @@
 import s from './MyPosts.module.css';
 import React from "react";
 import Post from "./Post/Post";
+import Button from "./Button/Button";
+import TextInput from "./TextInput/TextInput";
 
 const MyPosts = () => {
     return (
@@ -9,8 +11,8 @@ const MyPosts = () => {
             <div className={s.new_post}>
                 <h3 className={s.new_post_title}>New post</h3>
                 <form action="#">
-                    <textarea name="newpost" id="newpost" cols="100" rows="5" placeholder={'Add post...'}></textarea>
-                    <button>Send</button>
+                    <TextInput placeholder={"Add post"}/>
+                    <Button value={"Send"}/>
                 </form>
             </div>
             <div className={s.posts}>

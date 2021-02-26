@@ -1,0 +1,26 @@
+
+
+.banner img {
+    width: 100%;
+}
+
+.item a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+
+}
+
+.bio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bio__img img {
+    width: 100px;
+}
+
+.bio__descr {
+
+}
