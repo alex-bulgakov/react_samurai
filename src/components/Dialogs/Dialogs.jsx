@@ -15,16 +15,27 @@ const Message = (props) => {
     );
 }
 
-let dialogsData = [
-    {id: 1, name: 'Vova'},
-    {id: 2, name: 'Ira'},
-    {id: 3, name: 'Sveta'},
-    {id: 4, name: 'Mixa'},
-    {id: 5, name: 'Sanya'},
-    {id: 6, name: 'Jeka'},
-];
 
-const Dialogs = () => {
+const Dialogs = (props) => {
+
+    let dialogsData = [
+        {id: 1, name: 'Vova'},
+        {id: 2, name: 'Ira'},
+        {id: 3, name: 'Sveta'},
+        {id: 4, name: 'Mixa'},
+        {id: 5, name: 'Sanya'},
+        {id: 6, name: 'Jeka'},
+    ];
+
+    let messagesData = [
+        {id: 1, message: 'Hi'},
+        {id: 2, message: 'Hello'},
+        {id: 3, message: 'Aloha'},
+        {id: 4, message: 'Привет'},
+        {id: 5, message: 'TestTEst'},
+        {id: 6, message: 'sadslfkj'},
+    ];
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogs_list}>
@@ -39,12 +50,12 @@ const Dialogs = () => {
             </div>
             <div className={s.messages}>
                 <ul>
-                    <Message message={"Hello"}/>
-                    <Message message={" sdfls lkdsfljsdf jas"}/>
-                    <Message message={"Wew woe"}/>
-                    <Message message={"dsdf; a;asdf;l a;sdfg;ajorg;etog;eb "}/>
-                    <Message message={"sdafo;asd a;sdof ;aosdfxdkcvn a;dfs oi as;odfij ;asokdfj o"}/>
-                    <Message message={"sd"}/>
+                    <Message message={messagesData[0].message}/>
+                    <Message message={messagesData[1].message}/>
+                    <Message message={messagesData[2].message}/>
+                    <Message message={messagesData[3].message}/>
+                    <Message message={messagesData[4].message}/>
+                    <Message message={messagesData[5].message}/>
                 </ul>
             </div>
             <div></div>

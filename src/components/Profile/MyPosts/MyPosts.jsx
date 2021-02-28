@@ -5,6 +5,13 @@ import Button from "./Button/Button";
 import TextInput from "./TextInput/TextInput";
 
 const MyPosts = () => {
+    let postsData = [
+        {id: 1, message: 'hello', likesCount: 1},
+        {id: 2, message: 'lsdfo sdof ', likesCount: 2},
+        {id: 3, message: 'owqt[oij', likesCount: 11},
+        {id: 4, message: 'sdf', likesCount: 5},
+    ];
+
     return (
         <div className={s.my_posts}>
             My posts
@@ -17,10 +24,10 @@ const MyPosts = () => {
             </div>
             <div className={s.posts}>
                 <ul>
-                    <Post message={'hello'} likes={'1'}/>
-                    <Post message={'My firs post'} likes={'10'}/>
-                    <Post message={'I started new project'} likes={'4'}/>
-                    <Post message={'My WIP'} likes={'8'}/>
+                    <Post message={postsData[0].message} likes={postsData[0].likesCount}/>
+                    <Post message={postsData[1].message} likes={postsData[1].likesCount}/>
+                    <Post message={postsData[2].message} likes={postsData[2].likesCount}/>
+                    <Post message={postsData[3].message} likes={postsData[3].likesCount}/>
                 </ul>
             </div>
         </div>
