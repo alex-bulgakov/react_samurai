@@ -19,11 +19,11 @@ const App = () => {
                 <Header/>
                 <Navbar/>
                 <div class="app-wrapper-content">
-                    <Route path="/dialogs" component={Dialogs}/>
-                    <Route path="/profile" component={Profile}/>
-                    <Route path="/news" component={News}/>
-                    <Route path="/music" component={Music}/>
-                    <Route path="/settings" component={Settings}/>
+                    <Route path="/dialogs" reneder={() => <Dialogs/>}/>
+                    <Route path="/profile" reneder={() => <Profile/>}/>
+                    <Route path="/news" reneder={() => <News/>}/>
+                    <Route path="/music" reneder={() => <Music/>}/>
+                    <Route path="/settings" reneder={() => <Settings/>}/>
                 </div>
             </div>
         </BrowserRouter>

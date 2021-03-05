@@ -4,15 +4,10 @@ import Post from "./Post/Post";
 import Button from "./Button/Button";
 import TextInput from "./TextInput/TextInput";
 
-const MyPosts = () => {
-    let postsData = [
-        {id: 1, message: 'hello', likesCount: 1},
-        {id: 2, message: 'lsdfo sdof ', likesCount: 2},
-        {id: 3, message: 'owqt[oij', likesCount: 11},
-        {id: 4, message: 'sdf', likesCount: 5},
-    ];
+const MyPosts = (props) => {
 
-    let postsElements = postsData.map(p => <Post message={p.message} likes={p.likesCount}/>)
+
+    let postsElements = props.data.map(p => <Post message={p.message} likes={p.likesCount}/>)
 
     return (
         <div className={s.my_posts}>
