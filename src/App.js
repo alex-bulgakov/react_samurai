@@ -9,21 +9,21 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import {BrowserRouter, Route} from "react-router-dom";
-// import Router from "react-router-dom";
 
 
-const App = () => {
+const App = (props) => {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
-                <div class="app-wrapper-content">
-                    <Route path="/dialogs" reneder={() => <Dialogs/>}/>
-                    <Route path="/profile" reneder={() => <Profile/>}/>
-                    <Route path="/news" reneder={() => <News/>}/>
-                    <Route path="/music" reneder={() => <Music/>}/>
-                    <Route path="/settings" reneder={() => <Settings/>}/>
+                <div className="app-wrapper-content">
+                    <Route path="/dialogs"> <Dialogs dialogs={props.data.dialogs} messages={props.data.messages}/>
+                    </Route>
+                    <Route path="/profile"> <Profile posts={props.data.posts}/> </Route>
+                    <Route path="/news"> <News/> </Route>
+                    <Route path="/music"> <Music/> </Route>
+                    <Route path="/settings"> <Settings/> </Route>
                 </div>
             </div>
         </BrowserRouter>
