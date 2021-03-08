@@ -24,10 +24,12 @@ const App = (props) => {
                     <Route path="/news"> <News/> </Route>
                     <Route path="/music"> <Music/> </Route>
                     <Route path="/settings"> <Settings/> </Route>
+
                 </div>
             </div>
         </BrowserRouter>
-    );
+    )
+        ;
 }
 
 export default App;
