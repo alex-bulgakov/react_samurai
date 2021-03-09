@@ -15,21 +15,21 @@ let dialogsData = [
 ];
 
 let messagesData = [
-    {id: 1, message: 'Hi'},
-    {id: 2, message: 'Hello'},
-    {id: 3, message: 'Aloha'},
-    {id: 4, message: 'Привет'},
-    {id: 5, message: 'TestTEst'},
-    {id: 6, message: 'sadslfkj'},
+    {id: 1, message: {text: 'Hi', answer: true}},
+    {id: 2, message: {text: 'Hello', answer: false}},
+    {id: 3, message: {text: 'Aloha', answer: true}},
+    {id: 4, message: {text: 'Привет', answer: true}},
+    {id: 5, message: {text: 'TestTEst', answer: false}},
+    {id: 6, message: {text: 'sadslfkj', answer: false}}
 ];
 
 let state = {
     profilePage: {
         posts: postsData,
-        dialogs: dialogsData,
     },
     messagesPage: {
-        messages: messagesData
+        messages: messagesData,
+        dialogs: dialogsData
     }
 }
 

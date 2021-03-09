@@ -2,8 +2,15 @@ import React from 'react';
 import s from '../Dialogs.module.css';
 
 const Message = (props) => {
+    let c = s.messages_item;
+    // debugger;
+    if (props.message.answer) {
+        c = `${s.right} ${s.messages_item}`;
+    }
     return (
-        <li className={s.messages_item}>{props.message}</li>
+        <li className={c}>
+            <div>{props.message.text}</div>
+        </li>
     );
 }
 

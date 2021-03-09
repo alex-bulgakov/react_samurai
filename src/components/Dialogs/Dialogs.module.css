@@ -37,18 +37,29 @@
 }
 
 .messages ul {
-    width: 250px;
+    width: 80%;
 }
 
 .messages_item {
     display: block;
     box-sizing: border-box;
-    width: fit-content;
-    /*min-height: 50px;*/
     padding: 10px;
-    text-align: left;
+    text-align: right;
     margin-bottom: 10px;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.messages_item div {
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 10px;
     border-radius: 20px;
+    text-align: right;
     background-color: rgba(164, 215, 153, 0.45);
 }
 
