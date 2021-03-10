@@ -4,7 +4,7 @@ import './lib/fontawesome/css/fa_all.min.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
+import Messages from './components/Dialogs/Messages';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
@@ -18,8 +18,8 @@ const App = (props) => {
                 <Header/>
                 <Navbar/>
                 <div className="app-wrapper-content">
-                    <Route path="/dialogs"> <Dialogs dialogs={props.data.messagesPage.dialogs}
-                                                     messages={props.data.messagesPage.messages}/>
+                    <Route path="/dialogs"> <Messages dialogs={props.data.messagesPage.dialogs}
+                                                      messages={props.data.messagesPage.messages}/>
                     </Route>
                     <Route path="/profile"> <Profile posts={props.data.profilePage.posts}/> </Route>
                     <Route path="/news"> <News/> </Route>

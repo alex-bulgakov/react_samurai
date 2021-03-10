@@ -1,5 +1,5 @@
 import React from 'react';
-import s from '../Dialogs.module.css';
+import s from '../../Messages.module.css';
 
 const Message = (props) => {
     let c = s.messages_item;
