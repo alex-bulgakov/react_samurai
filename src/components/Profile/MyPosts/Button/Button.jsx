@@ -3,7 +3,9 @@ import React from "react";
 
 const Button = (props) => {
     return (
-        <button className={s.btn}>{props.value}</button>
+        <button onClick={() => {
+
+        }} className={s.btn}>{props.value}</button>
     );
 }
 
