@@ -17,18 +17,6 @@
     padding-right: 20px;
 }
 
-.dialogs_item a {
-    display: block;
-    min-width: 100px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    color: white;
-    background-color: #a4d799;
-}
-
 .messages {
     display: flex;
     flex-direction: column;

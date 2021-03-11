@@ -10,9 +10,12 @@
 }
 
 .item {
-
+    min-height: 30px;
 }
 
 a.active {
-    color: gold;
+    font-size: 20px;
+    transition: 0.2s all;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 71, 0);
 }

@@ -1,0 +1,15 @@
+.dialogs_item a {
+    display: block;
+    min-width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: #a4d799;
+}
+
+.dialogs_item a:active {
+    box-shadow: 0 0 10px -5px black;
+}

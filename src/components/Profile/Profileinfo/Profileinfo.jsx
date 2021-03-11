@@ -4,11 +4,11 @@ import s from './Profileinfo.module.css';
 const Profileinfo = () => {
     return <div>
         <div className={s.banner}>
-            <img src="banner.jpg" alt="banner"/>
+            <img src="img/banner.jpg" alt="banner"/>
         </div>
         <div className={s.bio}>
             <div className={s.bio__img}>
-                <img src="avatar.jpg" alt="avatar"/>
+                <img src="img/avatar.jpg" alt="avatar"/>
             </div>
             <div className={s.bio__descr}>
                 <ul>
