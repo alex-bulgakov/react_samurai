@@ -1,7 +1,6 @@
 import s from './MyPosts.module.css';
 import React from "react";
 import Post from "./Post/Post";
-import Button from "./Button/Button";
 import TextInput from "./TextInput/TextInput";
 //
 // let postsData = [
@@ -23,8 +22,7 @@ const MyPosts = (props) => {
             <div className={s.new_post}>
                 <h3 className={s.new_post_title}>New post</h3>
                 <form action="#">
-                    <TextInput placeholder={"Add post"}/>
-                    <Button value={"Send"}/>
+                    <TextInput placeholder={"Add post"} button_text={"Send"} addPost={props.addPost}/>
                 </form>
             </div>
             <div className={s.posts}>

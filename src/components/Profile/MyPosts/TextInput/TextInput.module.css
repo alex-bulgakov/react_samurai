@@ -9,3 +9,27 @@ textarea {
 textarea:focus {
     outline: none;
 }
+
+.btn {
+    display: block;
+    background-color: #a4d799;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    min-width: 100px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: 0 0 10px -5px black;
+}
