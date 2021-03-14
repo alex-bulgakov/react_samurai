@@ -6,7 +6,7 @@ const MessageInput = (props) => {
 
     let sendMessage = () => {
         let text = newMessage.current.value;
-        if (text == "") {
+        if (text === "") {
             alert("Write something");
         } else {
             alert(text);

@@ -6,15 +6,10 @@ const TextInput = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
+        debugger;
         let text = newPostElement.current.value;
-        if (text == "") {
-            alert("Write something");
-        } else {
-            debugger;
-            props.addPost(text);
-        }
-    };
-
+        props.addPost(text);
+    }
     return (
         <div>
             <textarea name="newpost" ref={newPostElement} cols="100" rows="5"

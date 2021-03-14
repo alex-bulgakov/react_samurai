@@ -14,7 +14,7 @@ import TextInput from "./TextInput/TextInput";
 const MyPosts = (props) => {
 
 
-    let postsElements = props.posts.map(p => <Post message={p.message} likes={p.likesCount}/>)
+    let postsElements = props.posts.map(p => <Post key={p.id} message={p.message} likes={p.likesCount}/>)
 
     return (
         <div className={s.my_posts}>
