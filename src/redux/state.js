@@ -10,6 +10,15 @@ let addPost = (postMessage) => {
     rerenderEntireTree(state);
 }
 
+let addMessage = (message) => {
+    let newMessage = {
+        id: 5,
+        message: {text: message, answer: true}
+    };
+    state.messagesPage.messages.push(newMessage);
+    rerenderEntireTree(state);
+}
+
 
 let postsData = [
     {id: 1, message: 'hello', likesCount: 1},
@@ -44,7 +53,8 @@ let state = {
         messages: messagesData,
         dialogs: dialogsData
     },
-    addPost: addPost
+    addPost: addPost,
+    addMessage: addMessage
 }
 
 
