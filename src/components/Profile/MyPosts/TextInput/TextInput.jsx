@@ -10,10 +10,15 @@ const TextInput = (props) => {
         props.addPost(text);
         newPostElement.current.value = "";
     }
+
+    let onPostChange = () => {
+
+    }
+
     return (
         <div>
-            <textarea name="newpost" ref={newPostElement} cols="100" rows="5"
-                      placeholder={props.placeholder}/>
+            <textarea onChange={onPostChange} name="newpost" ref={newPostElement} cols="100" rows="5"
+                      placeholder={props.placeholder} value={props.newPostText}/>
             <button onClick={addPost} className={s.btn}>{props.button_text}</button>
         </div>
     );

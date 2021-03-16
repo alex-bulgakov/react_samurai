@@ -1,6 +1,6 @@
 import rerenderEntireTree from "../render";
 
-let addPost = (postMessage) => {
+export let addPost = (postMessage) => {
     let newPost = {
         id: 5,
         message: postMessage,
@@ -10,7 +10,7 @@ let addPost = (postMessage) => {
     rerenderEntireTree(state);
 }
 
-let addMessage = (message) => {
+export let addMessage = (message) => {
     let newMessage = {
         id: 5,
         message: {text: message, answer: true}
@@ -48,13 +48,12 @@ let messagesData = [
 let state = {
     profilePage: {
         posts: postsData,
+        newPostText: 'this is from state'
     },
     messagesPage: {
         messages: messagesData,
         dialogs: dialogsData
     },
-    addPost: addPost,
-    addMessage: addMessage
 }
 
 

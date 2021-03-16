@@ -21,7 +21,8 @@ const MyPosts = (props) => {
             My posts
             <div className={s.new_post}>
                 <h3 className={s.new_post_title}>New post</h3>
-                <TextInput placeholder={"Add post"} button_text={"Send"} addPost={props.addPost}/>
+                <TextInput placeholder={"Add post"} button_text={"Send"} addPost={props.addPost}
+                           newPostText={props.newPostText}/>
             </div>
             <div className={s.posts}>
                 <ul>

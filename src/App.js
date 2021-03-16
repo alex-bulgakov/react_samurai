@@ -22,7 +22,9 @@ const App = (props) => {
                                                       messages={props.data.messagesPage.messages}
                                                       addMessage={props.addMessage}/>
                     </Route>
-                    <Route path="/profile"> <Profile posts={props.data.profilePage.posts} addPost={props.addPost}/>
+                    <Route path="/profile"> <Profile newPostText={props.data.profilePage.newPostText}
+                                                     posts={props.data.profilePage.posts}
+                                                     addPost={props.addPost}/>
                     </Route>
                     <Route path="/news"> <News/> </Route>
                     <Route path="/music"> <Music/> </Route>
