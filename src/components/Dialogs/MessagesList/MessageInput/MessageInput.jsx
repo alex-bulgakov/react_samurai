@@ -14,7 +14,8 @@ const MessageInput = (props) => {
 
     return (
         <div className={s.message_input}>
-            <textarea name="newpost" ref={newMessage} cols="80" rows="1" placeholder={props.placeholder}></textarea>
+            <textarea name="newpost" ref={newMessage} cols="80" rows="1" placeholder={props.placeholder}
+                      value={props.newMessage}></textarea>
             <button onClick={sendMessage} className={s.button}>Send</button>
         </div>
     );

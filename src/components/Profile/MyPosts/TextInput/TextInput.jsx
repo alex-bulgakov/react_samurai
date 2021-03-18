@@ -1,12 +1,10 @@
 import React from "react";
 import s from './TextInput.module.css';
-import state from "../../../../redux/state";
 
 const TextInput = (props) => {
 
     let newPostElement = React.createRef();
 
-    window.state = state;
 
     let addPost = () => {
         props.addPost();
