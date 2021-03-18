@@ -4,42 +4,46 @@ let rerenderEntireTree = (state) => {
     console.log("rerender");
 }
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
         likesCount: 0
     };
     state.profilePage.posts.push(newPost);
-    rerenderEntireTree(state);
+    rerenderEntireTree();
 }
 
-export let addMessage = () => {
+export const addMessage = () => {
     let newMessage = {
         id: 5,
         message: {text: state.messagesPage.newMessage, answer: true}
     };
     state.messagesPage.messages.push(newMessage);
-    rerenderEntireTree(state);
+    rerenderEntireTree();
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
-    rerenderEntireTree(state);
+    rerenderEntireTree();
 }
 
-export let updateNewMessage = (newText) => {
+export const updateNewMessage = (newText) => {
     state.messagesPage.newMessage = newText;
-    rerenderEntireTree(state);
+    rerenderEntireTree();
 }
 
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+}
 
-let postsData = [
-    {id: 1, message: 'hello', likesCount: 1},
-    {id: 2, message: 'lsdfo sdof ', likesCount: 2},
-    {id: 3, message: 'owqt[oij', likesCount: 11},
-    {id: 4, message: 'sdf', likesCount: 5},
-];
+let
+    postsData = [
+        {id: 1, message: 'hello', likesCount: 1},
+        {id: 2, message: 'lsdfo sdof ', likesCount: 2},
+        {id: 3, message: 'owqt[oij', likesCount: 11},
+        {id: 4, message: 'sdf', likesCount: 5},
+    ];
 
 let dialogsData = [
     {id: 1, name: 'Vova'},
