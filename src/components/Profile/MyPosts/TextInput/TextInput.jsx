@@ -6,10 +6,10 @@ const TextInput = (props) => {
 
     let newPostElement = React.createRef();
 
+    window.state = state;
+
     let addPost = () => {
-        let text = newPostElement.current.value;
-        props.addPost(text);
-        newPostElement.current.value = "";
+        props.addPost();
         props.updateNewPostText("");
     }
 
