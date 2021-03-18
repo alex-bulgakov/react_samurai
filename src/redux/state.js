@@ -11,7 +11,7 @@ export const addPost = () => {
         likesCount: 0
     };
     state.profilePage.posts.push(newPost);
-    rerenderEntireTree();
+    rerenderEntireTree(state);
 }
 
 export const addMessage = () => {
@@ -20,17 +20,17 @@ export const addMessage = () => {
         message: {text: state.messagesPage.newMessage, answer: true}
     };
     state.messagesPage.messages.push(newMessage);
-    rerenderEntireTree();
+    rerenderEntireTree(state);
 }
 
 export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
-    rerenderEntireTree();
+    rerenderEntireTree(state);
 }
 
 export const updateNewMessage = (newText) => {
     state.messagesPage.newMessage = newText;
-    rerenderEntireTree();
+    rerenderEntireTree(state);
 }
 
 export const subscribe = (observer) => {

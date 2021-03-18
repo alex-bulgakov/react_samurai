@@ -5,7 +5,7 @@ import state, {addMessage, addPost, subscribe, updateNewMessage, updateNewPostTe
 import ReactDOM from "react-dom";
 import App from "./App";
 
-let rerenderEntireTree = () => {
+let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <App data={state} addPost={addPost} addMessage={addMessage} updateNewPostText={updateNewPostText}
              updateNewMessage={updateNewMessage}/>,
