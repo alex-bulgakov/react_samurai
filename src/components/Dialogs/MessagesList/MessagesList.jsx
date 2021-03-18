@@ -17,7 +17,8 @@ const MessagesList = (props) => {
                 }
             </ul>
 
-            <MessageInput placeholder={"Enter message"} addMessage={props.addMessage}/>
+            <MessageInput placeholder={"Enter message"} addMessage={props.addMessage}
+                          updateNewMessage={props.updateNewMessage}/>
         </div>
     );
 }

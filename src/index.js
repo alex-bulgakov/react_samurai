@@ -1,8 +1,17 @@
 import React from 'react';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import rerenderEntireTree from "./render";
-import state from "./redux/state";
+import state, {addMessage, addPost, updateNewMessage, updateNewPostText} from "./redux/state";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+let rerenderEntireTree = (state) => {
+    ReactDOM.render(
+        <App data={state} addPost={addPost} addMessage={addMessage} updateNewPostText={updateNewPostText}
+             updateNewMessage={updateNewMessage}/>,
+        document.getElementById('root')
+    );
+}
 
 rerenderEntireTree(state);
 

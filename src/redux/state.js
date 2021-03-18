@@ -1,4 +1,8 @@
-import rerenderEntireTree from "../render";
+import React from "react";
+
+let rerenderEntireTree = (state) => {
+    console.log("rerender");
+}
 
 export let addPost = () => {
     let newPost = {
@@ -10,10 +14,10 @@ export let addPost = () => {
     rerenderEntireTree(state);
 }
 
-export let addMessage = (message) => {
+export let addMessage = () => {
     let newMessage = {
         id: 5,
-        message: {text: message, answer: true}
+        message: {text: state.messagesPage.newMessage, answer: true}
     };
     state.messagesPage.messages.push(newMessage);
     rerenderEntireTree(state);
@@ -25,7 +29,7 @@ export let updateNewPostText = (newText) => {
 }
 
 export let updateNewMessage = (newText) => {
-    state.profilePage.newPostText = newText;
+    state.messagesPage.newMessage = newText;
     rerenderEntireTree(state);
 }
 

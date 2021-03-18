@@ -35,3 +35,7 @@ textarea:focus {
 .button:active {
     box-shadow: 0 0 10px -5px black;
 }
+
+.button:focus {
+    outline: none;
+}
