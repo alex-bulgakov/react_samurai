@@ -1,5 +1,6 @@
 import React from "react";
 import s from './TextInput.module.css';
+import state from "../../../../redux/state";
 
 const TextInput = (props) => {
 
@@ -9,10 +10,12 @@ const TextInput = (props) => {
         let text = newPostElement.current.value;
         props.addPost(text);
         newPostElement.current.value = "";
+        props.updateNewPostText("");
     }
 
     let onPostChange = () => {
-
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
     }
 
     return (

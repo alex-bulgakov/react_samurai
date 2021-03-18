@@ -19,6 +19,11 @@ export let addMessage = (message) => {
     rerenderEntireTree(state);
 }
 
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
 
 let postsData = [
     {id: 1, message: 'hello', likesCount: 1},

@@ -24,7 +24,8 @@ const App = (props) => {
                     </Route>
                     <Route path="/profile"> <Profile newPostText={props.data.profilePage.newPostText}
                                                      posts={props.data.profilePage.posts}
-                                                     addPost={props.addPost}/>
+                                                     addPost={props.addPost}
+                                                     updateNewPostText={props.updateNewPostText}/>
                     </Route>
                     <Route path="/news"> <News/> </Route>
                     <Route path="/music"> <Music/> </Route>
