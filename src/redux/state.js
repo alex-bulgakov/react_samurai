@@ -4,10 +4,6 @@ let rerenderEntireTree = (state) => {
     console.log("rerender");
 }
 
-let testObj = {
-    _name: '',
-
-}
 
 export const addPost = () => {
     let newPost = {
