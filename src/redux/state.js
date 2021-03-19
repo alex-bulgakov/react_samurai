@@ -54,7 +54,9 @@ let store = {
             id: 5,
             message: {text: this._state.messagesPage.newMessage, answer: true}
         };
-        this._state.messagesPage.messages.push(newMessage);
+        if (newMessage.message.text != "") {
+            this._state.messagesPage.messages.push(newMessage);
+        }
         this.rerenderEntireTree(this._state);
     },
     addPost() {
@@ -63,9 +65,13 @@ let store = {
             message: this._state.profilePage.newPostText,
             likesCount: 0
         };
-        this._state.profilePage.posts.push(newPost);
+        if (newPost.message != "") {
+            this._state.profilePage.posts.push(newPost);
+        }
         this.rerenderEntireTree(this.state);
     },
 }
+
+console.log(store._state);
 
 export default store;
