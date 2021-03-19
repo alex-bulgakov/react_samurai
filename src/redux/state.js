@@ -76,5 +76,7 @@ let state = {
     },
 }
 
+//TODO: create one store object
+
 
 export default state;
