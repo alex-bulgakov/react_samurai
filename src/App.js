@@ -18,15 +18,9 @@ const App = (props) => {
                 <Header/>
                 <Navbar/>
                 <div className="app-wrapper-content">
-                    <Route path="/dialogs"> <Messages dialogs={props.data.messagesPage.dialogs}
-                                                      messages={props.data.messagesPage.messages}
-                                                      addMessage={props.addMessage}
-                                                      updateNewMessage={props.updateNewMessage}/>
+                    <Route path="/dialogs"> <Messages store={props.store}/>
                     </Route>
-                    <Route path="/profile"> <Profile newPostText={props.data.profilePage.newPostText}
-                                                     posts={props.data.profilePage.posts}
-                                                     addPost={props.addPost}
-                                                     updateNewPostText={props.updateNewPostText}/>
+                    <Route path="/profile"> <Profile store={props.store}/>
                     </Route>
                     <Route path="/news"> <News/> </Route>
                     <Route path="/music"> <Music/> </Route>

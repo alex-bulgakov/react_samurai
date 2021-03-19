@@ -5,7 +5,7 @@ import MessageInput from "./MessageInput/MessageInput";
 
 const MessagesList = (props) => {
 
-    let messages = props.messages.map(m =>
+    let messages = props.store.getState().messagesPage.messages.map(m =>
         <Message message={m.message}/>
     );
 
@@ -17,8 +17,7 @@ const MessagesList = (props) => {
                 }
             </ul>
 
-            <MessageInput placeholder={"Enter message"} addMessage={props.addMessage}
-                          updateNewMessage={props.updateNewMessage}/>
+            <MessageInput placeholder={"Enter message"} store={props.store}/>
         </div>
     );
 }
