@@ -7,13 +7,13 @@ const TextInput = (props) => {
 
 
     let addPost = () => {
-        props.store.addPost();
-        props.store.updateNewPostText("");
+        props.store.dispatch({type: 'ADD-POST'});
+        props.store.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: ""});
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.store.updateNewPostText(text);
+        props.store.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
     }
 
     return (

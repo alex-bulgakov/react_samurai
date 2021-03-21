@@ -5,13 +5,15 @@ const MessageInput = (props) => {
     let newMessage = React.createRef();
 
     let sendMessage = () => {
-        props.store.addMessage();
-        props.store.updateNewMessage("");
+        props.store.dispatch({type: 'ADD-MESSAGE'});
+        props.store.dispatch({type: 'UPDATE-NEW-MESSAGE', newText: ''});
     }
 
     let onMessageChange = () => {
         let text = newMessage.current.value;
-        props.store.updateNewMessage(text);
+        props.store.dispatch({
+            type: 'UPDATE-NEW-MESSAGE', newText: text
+        })
     }
 
     return (

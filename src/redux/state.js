@@ -41,35 +41,39 @@ let store = {
     getState() {
         return this._state;
     },
-    updateNewMessage(newText) {
-        this._state.messagesPage.newMessage = newText;
-        this.rerenderEntireTree(this._state);
-    },
-    updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText;
-        this.rerenderEntireTree(this._state);
-    },
-    addMessage() {
-        let newMessage = {
-            id: 5,
-            message: {text: this._state.messagesPage.newMessage, answer: true}
-        };
-        if (newMessage.message.text != "") {
-            this._state.messagesPage.messages.push(newMessage);
+
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 5,
+                message: this._state.profilePage.newPostText,
+                likesCount: 0
+            };
+            if (newPost.message !== "") {
+                this._state.profilePage.posts.push(newPost);
+            }
+            this.rerenderEntireTree(this.state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText;
+            this.rerenderEntireTree(this._state);
+        } else if (action.type === 'ADD-MESSAGE') {
+            let newMessage = {
+                id: 5,
+                message: {text: this._state.messagesPage.newMessage, answer: true}
+            };
+            if (newMessage.message.text !== "") {
+                this._state.messagesPage.messages.push(newMessage);
+            }
+            this.rerenderEntireTree(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText;
+            this.rerenderEntireTree(this._state);
+        } else if (action.type === 'UPDATE-NEW-MESSAGE') {
+            this._state.messagesPage.newMessage = action.newText;
+            this.rerenderEntireTree(this._state);
         }
-        this.rerenderEntireTree(this._state);
-    },
-    addPost() {
-        let newPost = {
-            id: 5,
-            message: this._state.profilePage.newPostText,
-            likesCount: 0
-        };
-        if (newPost.message != "") {
-            this._state.profilePage.posts.push(newPost);
-        }
-        this.rerenderEntireTree(this.state);
-    },
+
+    }
 }
 
 console.log(store._state);
