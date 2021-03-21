@@ -1,5 +1,7 @@
 import React from "react";
 import s from './TextInput.module.css';
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redux/state";
+
 
 const TextInput = (props) => {
 
@@ -7,13 +9,13 @@ const TextInput = (props) => {
 
 
     let addPost = () => {
-        props.store.dispatch({type: 'ADD-POST'});
-        props.store.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: ""});
+        props.store.dispatch(addPostActionCreator());
+        props.store.dispatch(updateNewPostTextActionCreator(""));
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.store.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
+        props.store.dispatch(updateNewPostTextActionCreator(text));
     }
 
     return (
