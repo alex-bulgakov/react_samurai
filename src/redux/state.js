@@ -70,6 +70,9 @@ let store = {
         }
         this.rerenderEntireTree(this.state);
     },
+    dispatch() {
+
+    }
 }
 
 console.log(store._state);
