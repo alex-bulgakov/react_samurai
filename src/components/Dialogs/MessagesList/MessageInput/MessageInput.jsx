@@ -1,17 +1,18 @@
 import React from "react";
 import s from './MessageInput.module.css';
+import {addMessageActionCreator, updateNewMessageActionCreator} from "../../../../redux/state";
 
 const MessageInput = (props) => {
     let newMessage = React.createRef();
 
     let sendMessage = () => {
-        props.store.addMessage();
-        props.store.updateNewMessage("");
+        props.store.dispatch(addMessageActionCreator());
+        props.store.dispatch(updateNewMessageActionCreator(""));
     }
 
     let onMessageChange = () => {
         let text = newMessage.current.value;
-        props.store.updateNewMessage(text);
+        props.store.dispatch(updateNewMessageActionCreator(text));
     }
 
     return (

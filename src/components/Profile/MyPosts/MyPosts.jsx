@@ -12,10 +12,6 @@ const MyPosts = (props) => {
     return (
         <div className={s.my_posts}>
             My posts
-            <div className={s.new_post}>
-                <h3 className={s.new_post_title}>New post</h3>
-                <TextInput placeholder={"Add post"} button_text={"Send"} store={props.store}/>
-            </div>
             <div className={s.posts}>
                 <ul>
                     {
@@ -23,6 +19,11 @@ const MyPosts = (props) => {
                     }
                 </ul>
             </div>
+            <div className={s.new_post}>
+                <h3 className={s.new_post_title}>New post</h3>
+                <TextInput placeholder={"Add post"} button_text={"Send"} store={props.store}/>
+            </div>
+
         </div>
     );
 }
