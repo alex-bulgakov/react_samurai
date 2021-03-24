@@ -4,7 +4,7 @@ import DialogsItem from "./DialogItem/DialogsItem";
 
 
 let DialogsList = (props) => {
-    let dialogs = props.store.getState().messagesPage.dialogs.map(d =>
+    let dialogs = props.store.getState().dialogsPage.dialogs.map(d =>
         <DialogsItem id={d.id} name={d.name}/>
     );
 

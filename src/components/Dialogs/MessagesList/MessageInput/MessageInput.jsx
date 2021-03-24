@@ -19,7 +19,7 @@ const MessageInput = (props) => {
         <div className={s.message_input}>
             <textarea onChange={onMessageChange} name="newpost" ref={newMessage} cols="80" rows="1"
                       placeholder={props.placeholder}
-                      value={props.store.getState().messagesPage.newMessage}/>
+                      value={props.store.getState().dialogsPage.newMessage}/>
             <button onClick={sendMessage} className={s.button}>Send</button>
         </div>
     );

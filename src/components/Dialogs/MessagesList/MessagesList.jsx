@@ -5,7 +5,7 @@ import MessageInput from "./MessageInput/MessageInput";
 
 const MessagesList = (props) => {
 
-    let messages = props.store.getState().messagesPage.messages.map(m =>
+    let messages = props.store.getState().dialogsPage.messages.map(m =>
         <Message message={m.message}/>
     );
 
