@@ -20,7 +20,7 @@ const profileReducer = (state = initialState, action) => {
                 message: state.newPostText,
                 likesCount: 0
             };
-            if (newPost.message !== undefined) {
+            if (newPost.message !== "") {
                 state.posts.push(newPost);
             }
             break;

@@ -7,6 +7,7 @@ import TextInput from "./TextInput";
 const TextInputContainer = (props) => {
 
     let newPostElement = React.createRef();
+    let state = props.store.getState();
 
 
     let addPost = () => {
@@ -14,19 +15,14 @@ const TextInputContainer = (props) => {
         props.store.dispatch(updateNewPostTextActionCreator(""));
     }
 
-    let onPostChange = () => {
-        let text = newPostElement.current.value;
+    let onPostChange = (text) => {
         props.store.dispatch(updateNewPostTextActionCreator(text));
     }
 
     return (
-        // <div>
-        //     <textarea onChange={onPostChange} name="newpost" ref={newPostElement} cols="100" rows="5"
-        //               placeholder={props.placeholder} value={props.store.getState().profilePage.newPostText}/>
-        //     <button onClick={addPost} className={s.btn}>{props.button_text}</button>
-        // </div>
         <TextInput addPost={addPost} onPostChange={onPostChange}
-                   value={props.store.getState().profilePage.newPostText}/>
+                   value={state.profilePage.newPostText} placeholder={props.placeholder}
+                   button_text={props.button_text}/>
     );
 }
 

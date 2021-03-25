@@ -9,15 +9,12 @@ const TextInput = (props) => {
 
 
     let addPost = () => {
-        // props.store.dispatch(addPostActionCreator());
-        // props.store.dispatch(updateNewPostTextActionCreator(""));
         props.addPost();
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
         props.onPostChange(text);
-        // props.store.dispatch(updateNewPostTextActionCreator(text));
     }
 
     return (

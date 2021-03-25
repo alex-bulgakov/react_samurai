@@ -4,6 +4,7 @@ import MessageInput from "./MessageInput";
 
 const MessageInputContainer = (props) => {
     let newMessage = React.createRef();
+    let state = props.store.getState();
 
     let sendMessage = () => {
         props.store.dispatch(addMessageActionCreator());
@@ -16,7 +17,7 @@ const MessageInputContainer = (props) => {
 
     return (
         <MessageInput updateNewMessage={onMessageChange} sendMessage={sendMessage}
-                      value={props.store.getState().dialogsPage.newMessage}/>
+                      value={state.dialogsPage.newMessage}/>
     );
 }
 
