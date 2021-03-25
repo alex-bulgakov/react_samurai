@@ -2,6 +2,7 @@ import s from './MyPosts.module.css';
 import React from "react";
 import Post from "./Post/Post";
 import TextInput from "./TextInput/TextInput";
+import TextInputContainer from "./TextInput/TextInputContainer";
 
 const MyPosts = (props) => {
 
@@ -21,7 +22,7 @@ const MyPosts = (props) => {
             </div>
             <div className={s.new_post}>
                 <h3 className={s.new_post_title}>New post</h3>
-                <TextInput placeholder={"Add post"} button_text={"Send"} store={props.store}/>
+                <TextInputContainer placeholder={"Add post"} button_text={"Send"} store={props.store}/>
             </div>
 
         </div>

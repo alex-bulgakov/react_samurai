@@ -1,7 +1,7 @@
 import s from "../Messages.module.css";
 import React from "react";
 import Message from "./Message/Message";
-import MessageInput from "./MessageInput/MessageInput";
+import MessageInputContainer from "./MessageInput/MessageInputContainer";
 
 const MessagesList = (props) => {
 
@@ -17,7 +17,7 @@ const MessagesList = (props) => {
                 }
             </ul>
 
-            <MessageInput placeholder={"Enter message"} store={props.store}/>
+            <MessageInputContainer placeholder={"Enter message"} store={props.store}/>
         </div>
     );
 }

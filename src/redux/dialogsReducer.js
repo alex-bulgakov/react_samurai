@@ -8,7 +8,6 @@ let initialState = {
         {id: 3, message: {text: 'Aloha', answer: true}},
         {id: 4, message: {text: 'Привет', answer: true}},
         {id: 5, message: {text: 'TestTEst', answer: false}},
-        {id: 6, message: {text: 'sadslfkj', answer: false}}
     ],
     dialogs: [
         {id: 1, name: 'Vova'},

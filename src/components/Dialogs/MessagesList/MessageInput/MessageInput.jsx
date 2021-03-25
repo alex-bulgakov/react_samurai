@@ -6,20 +6,19 @@ const MessageInput = (props) => {
     let newMessage = React.createRef();
 
     let sendMessage = () => {
-        props.store.dispatch(addMessageActionCreator());
-        props.store.dispatch(updateNewMessageActionCreator(""));
+        props.sendMessage();
     }
 
     let onMessageChange = () => {
         let text = newMessage.current.value;
-        props.store.dispatch(updateNewMessageActionCreator(text));
+        props.updateNewMessage(text);
     }
 
     return (
         <div className={s.message_input}>
             <textarea onChange={onMessageChange} name="newpost" ref={newMessage} cols="80" rows="1"
                       placeholder={props.placeholder}
-                      value={props.store.getState().dialogsPage.newMessage}/>
+                      value={props.value}/>
             <button onClick={sendMessage} className={s.button}>Send</button>
         </div>
     );

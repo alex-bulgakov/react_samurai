@@ -9,19 +9,21 @@ const TextInput = (props) => {
 
 
     let addPost = () => {
-        props.store.dispatch(addPostActionCreator());
-        props.store.dispatch(updateNewPostTextActionCreator(""));
+        // props.store.dispatch(addPostActionCreator());
+        // props.store.dispatch(updateNewPostTextActionCreator(""));
+        props.addPost();
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.store.dispatch(updateNewPostTextActionCreator(text));
+        props.onPostChange(text);
+        // props.store.dispatch(updateNewPostTextActionCreator(text));
     }
 
     return (
         <div>
             <textarea onChange={onPostChange} name="newpost" ref={newPostElement} cols="100" rows="5"
-                      placeholder={props.placeholder} value={props.store.getState().profilePage.newPostText}/>
+                      placeholder={props.placeholder} value={props.value}/>
             <button onClick={addPost} className={s.btn}>{props.button_text}</button>
         </div>
     );
