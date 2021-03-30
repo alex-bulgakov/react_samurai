@@ -4,11 +4,11 @@ import Profileinfo from "./Profileinfo/Profileinfo";
 import {Route} from "react-router-dom";
 
 
-const Profile = (props) => {
+const Profile = () => {
     return (
         <div>
             <Profileinfo/>
-            <MyPosts store={props.store}/>
+            <MyPosts/>
         </div>
     );
 }
